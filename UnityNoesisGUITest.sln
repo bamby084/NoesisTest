@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noesis.NoesisGUI", "Noesis.NoesisGUI.csproj", "{F5BA0801-D5EB-CCE5-295E-5E490F06ED32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{6736681C-7D1F-3210-409C-562450F6A542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noesis.NoesisGUI.Editor", "Noesis.NoesisGUI.Editor.csproj", "{2675F2FA-DDD8-4A4B-9D13-319ECA49E59E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5BA0801-D5EB-CCE5-295E-5E490F06ED32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BA0801-D5EB-CCE5-295E-5E490F06ED32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BA0801-D5EB-CCE5-295E-5E490F06ED32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BA0801-D5EB-CCE5-295E-5E490F06ED32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6736681C-7D1F-3210-409C-562450F6A542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6736681C-7D1F-3210-409C-562450F6A542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6736681C-7D1F-3210-409C-562450F6A542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6736681C-7D1F-3210-409C-562450F6A542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2675F2FA-DDD8-4A4B-9D13-319ECA49E59E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2675F2FA-DDD8-4A4B-9D13-319ECA49E59E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2675F2FA-DDD8-4A4B-9D13-319ECA49E59E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2675F2FA-DDD8-4A4B-9D13-319ECA49E59E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

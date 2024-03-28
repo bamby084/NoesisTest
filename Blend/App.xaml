@@ -1,0 +1,13 @@
+<Application x:Class="UnityNoesisGUITest.App"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="clr-namespace:UnityNoesisGUITest"
+  StartupUri="/UnityNoesisGUITest;component/Assets/UI/DashBoard.xaml">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Noesis.GUI.Extensions;component/Theme/NoesisTheme.LightBlue.xaml"/>
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>
