@@ -2,7 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Testing"
-             x:Name="Root" Width="1440" Height="1024">
+             x:Name="Root" MaxWidth="1440" MaxHeight="1024">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -11,352 +11,353 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    
-    <Grid Background="{StaticResource GrayscaleColorTint9}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
 
-        <Border Background="{StaticResource WhiteColor}" Width="269">
-            <Grid Background="{StaticResource WhiteColor}" Margin="32 38 32 0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="53"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+    <Viewbox Stretch="Uniform">
+        <Grid Background="{StaticResource GrayscaleColorTint9}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-                <Image Source="/Assets/Images/logo.png" Width="139" Height="61" HorizontalAlignment="Left"></Image>
-                <StackPanel Grid.Row="2" Orientation="Vertical">
-                    <TextBlock Text="GENERAL" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
-                    <Border CornerRadius="16" Background="{StaticResource RedBackgroundColor}" Margin="0 5 0 5">
-                        <StackPanel Orientation="Horizontal" Height="56" >
-                            <local:Icon Symbol="DashBoard" Color="{StaticResource SecondaryColor}" Margin="24 0 12 0"/>
-                            <TextBlock Text="Dashboard" FontFamily="{StaticResource urbanistFont}" FontSize="16" 
+            <Border Background="{StaticResource WhiteColor}" Width="269">
+                <Grid Background="{StaticResource WhiteColor}" Margin="32 38 32 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="53"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Image Source="/Assets/Images/logo.png" Width="139" Height="61" HorizontalAlignment="Left"></Image>
+                    <StackPanel Grid.Row="2" Orientation="Vertical">
+                        <TextBlock Text="GENERAL" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
+                        <Border CornerRadius="16" Background="{StaticResource RedBackgroundColor}" Margin="0 5 0 5">
+                            <StackPanel Orientation="Horizontal" Height="56" >
+                                <local:Icon Symbol="DashBoard" Color="{StaticResource SecondaryColor}" Margin="24 0 12 0"/>
+                                <TextBlock Text="Dashboard" FontFamily="{StaticResource urbanistFont}" FontSize="16" 
                                    VerticalAlignment="Center" Foreground="{StaticResource SecondaryColor}" FontWeight="SemiBold"/>
-                        </StackPanel>
-                    </Border>
+                            </StackPanel>
+                        </Border>
 
-                    <StackPanel Orientation="Horizontal" Height="56">
-                        <local:Icon Symbol="Book" Margin="24 0 12 0" Color="{StaticResource MainColorTint2}"/>
-                        <TextBlock Text="How It Works" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Height="56">
-                        <local:Icon Symbol="Resource" Margin="24 0 12 0" Color="{StaticResource MainColorTint2}"/>
-                        <TextBlock Text="Resources" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
-                    </StackPanel>
-
-
-                    <TextBlock Text="COURSES" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
-                    <StackPanel Orientation="Horizontal" Height="56">
-                        <local:Icon Symbol="Brain" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
-                        <TextBlock Text="My Workouts" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
-                    </StackPanel>
-
-                    <Border  Margin="0 0 0 5">
                         <StackPanel Orientation="Horizontal" Height="56">
-                            <local:Icon Symbol="BookOpen" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
-                            <TextBlock Text="Trainnings" FontFamily="{StaticResource urbanistFont}"  VerticalAlignment="Center" 
-                               FontSize="16" Foreground="{StaticResource MainColorTint2}" />
+                            <local:Icon Symbol="Book" Margin="24 0 12 0" Color="{StaticResource MainColorTint2}"/>
+                            <TextBlock Text="How It Works" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
                         </StackPanel>
-                    </Border>
 
-                    <TextBlock Text="OTHERS" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
-                    <StackPanel Orientation="Horizontal" Height="56">
-                        <local:Icon Symbol="Medal" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
-                        <TextBlock Text="Leader Board" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Height="56">
-                        <local:Icon Symbol="Setting" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
-                        <TextBlock Text="Setting" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
-                    </StackPanel>
-                </StackPanel>
+                        <StackPanel Orientation="Horizontal" Height="56">
+                            <local:Icon Symbol="Resource" Margin="24 0 12 0" Color="{StaticResource MainColorTint2}"/>
+                            <TextBlock Text="Resources" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
+                        </StackPanel>
 
-                <Border CornerRadius="29" Background="{StaticResource SecondaryColor}" Height="175" Width="206" Grid.Row="3">
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock FontFamily="{StaticResource hannoFont}" Foreground="{StaticResource WhiteColor}"
+
+                        <TextBlock Text="COURSES" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
+                        <StackPanel Orientation="Horizontal" Height="56">
+                            <local:Icon Symbol="Brain" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
+                            <TextBlock Text="My Workouts" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
+                        </StackPanel>
+
+                        <Border  Margin="0 0 0 5">
+                            <StackPanel Orientation="Horizontal" Height="56">
+                                <local:Icon Symbol="BookOpen" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
+                                <TextBlock Text="Trainnings" FontFamily="{StaticResource urbanistFont}"  VerticalAlignment="Center" 
+                               FontSize="16" Foreground="{StaticResource MainColorTint2}" />
+                            </StackPanel>
+                        </Border>
+
+                        <TextBlock Text="OTHERS" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
+                        <StackPanel Orientation="Horizontal" Height="56">
+                            <local:Icon Symbol="Medal" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
+                            <TextBlock Text="Leader Board" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Height="56">
+                            <local:Icon Symbol="Setting" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
+                            <TextBlock Text="Setting" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Border CornerRadius="29" Background="{StaticResource SecondaryColor}" Height="175" Width="206" Grid.Row="3">
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontFamily="{StaticResource hannoFont}" Foreground="{StaticResource WhiteColor}"
                                TextWrapping="Wrap" Width="127" TextAlignment="Center" Margin="0 18 0 0" FontSize="18">
                         <Run Text="Still Have Question?"/>
                         <Run Text="We're Here To Support" FontFamily="{StaticResource urbanistFont}" FontSize="16"/>
-                        </TextBlock>
+                            </TextBlock>
 
-                        <Border CornerRadius="12" Height="37" Width="158" Background="{StaticResource WhiteColor}" Margin="0 20 0 0">
-                            <TextBlock Text="Contact" Foreground="{StaticResource SecondaryColor}" FontFamily="{StaticResource urbanistFont}" FontWeight="SemiBold" FontSize="14"
+                            <Border CornerRadius="12" Height="37" Width="158" Background="{StaticResource WhiteColor}" Margin="0 20 0 0">
+                                <TextBlock Text="Contact" Foreground="{StaticResource SecondaryColor}" FontFamily="{StaticResource urbanistFont}" FontWeight="SemiBold" FontSize="14"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                        </Border>
-                    </StackPanel>
-                </Border>
-
-                <StackPanel Orientation="Horizontal" Height="56" Grid.Row="4" Margin="0 28 0 30">
-                    <local:Icon Symbol="LogOut" Color="{StaticResource BlackColor}" Margin="24 0 12 0"/>
-                    <TextBlock Text="Log Out" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource BlackColor}"/>
-                </StackPanel>
-            </Grid>
-        </Border>
-
-        <Grid Grid.Column="1">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="24"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
-            <Border Grid.Row="1" Grid.Column="0" Background="{StaticResource WhiteColor}" CornerRadius="15" Width="1121" Height="90">
-                <Grid Margin="25 16 25 16">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Text="Welcome Back, Peter!" FontFamily="{StaticResource urbanistFont}" FontSize="24" FontWeight="SemiBold"/>
-                        <TextBlock Text="Ready to give your brain a workout?" FontFamily="{StaticResource urbanistFont}" FontSize="16"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Vertical" Grid.Column="1">
-                        <TextBlock Text="Monday" FontFamily="{StaticResource urbanistFont}" FontSize="20"/>
-                        <TextBlock Text="February 22, 2023" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
-                    </StackPanel>
-
-                    <StackPanel Orientation="Horizontal" Grid.Column="2" Margin="24 0 24 0">
-                        <Border Width="40" Height="40" Background="Black" CornerRadius="20" VerticalAlignment="Top">
-                            <local:Icon Symbol="Mic" Color="{StaticResource WhiteColor}"/>
-                        </Border>
-
-                        <StackPanel Orientation="Vertical" Margin="16 0 0 0">
-                            <TextBlock Text="Sound Check" FontFamily="{StaticResource urbanistFont}" FontSize="14"/>
-                            <Grid Margin="0 12 0 0">
-                                <Border Width="116" Height="8" Background="#DDDDDD" CornerRadius="4" HorizontalAlignment="Left"/>
-                                <Border Width="103" Height="8" Background="{StaticResource SuccessColor}" CornerRadius="4" HorizontalAlignment="Left"/>
-                            </Grid>
+                            </Border>
                         </StackPanel>
-                    </StackPanel>
+                    </Border>
 
-                    <StackPanel Grid.Column="3" Orientation="Horizontal">
-                        <local:Icon Symbol="MagnifyingGlass" Color="{StaticResource BlackColor}" VerticalAlignment="Top" Margin="18 13 18 0"/>
-                        <local:Icon Symbol="Bell" Color="{StaticResource BlackColor}" Margin="18 13 18 0" VerticalAlignment="Top"/>
-                        <Image Width="58" Height="58" Source="/Assets/Images/Profile.png" VerticalAlignment="Top"/>
-                        <Border Background="{StaticResource RedColor}" CornerRadius="20" Width="40" Height="40" Margin="24 0 0 0">
-                            <local:Icon Symbol="Bug" Color="{StaticResource WhiteColor}"/>
-                        </Border>
+                    <StackPanel Orientation="Horizontal" Height="56" Grid.Row="4" Margin="0 28 0 30">
+                        <local:Icon Symbol="LogOut" Color="{StaticResource BlackColor}" Margin="24 0 12 0"/>
+                        <TextBlock Text="Log Out" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource BlackColor}"/>
                     </StackPanel>
                 </Grid>
             </Border>
 
-            <Grid Grid.Row="2" Margin="25">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="35"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="24"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <StackPanel Orientation="Vertical">
-                    <Border Width="419" Height="77" Background="White" CornerRadius="15">
-                        <StackPanel Orientation="Horizontal" Margin="24">
-                            <local:Icon Symbol="Audio" Color="{StaticResource SecondaryColor}"/>
-                            <TextBlock Text="Continue Training" FontSize="24" FontFamily="{StaticResource urbanistFont}" Margin="8 1 0 0"/>
+                <Border Grid.Row="1" Grid.Column="0" Background="{StaticResource WhiteColor}" CornerRadius="15" Width="1121" Height="90">
+                    <Grid Margin="25 16 25 16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="Welcome Back, Peter!" FontFamily="{StaticResource urbanistFont}" FontSize="24" FontWeight="SemiBold"/>
+                            <TextBlock Text="Ready to give your brain a workout?" FontFamily="{StaticResource urbanistFont}" FontSize="16"/>
                         </StackPanel>
-                    </Border>
 
-                    <Border Width="419" Height="296" Margin="0 8 0 0" Background="LightGray" CornerRadius="8">
-                        <!--<wv2:WebView2 Source="https://www.youtube.com/embed/TfVlOpoo2Bw"/>-->
-                        <Image Source="/Assets/Images/Videostest.png" Width="419" Height="296" Stretch="Fill"/>
-                    </Border>
-                    <TextBlock Text="Introduction To The Kennedy Method" FontSize="16" FontFamily="{StaticResource urbanistFont}" Margin="50 12 0 0"/>
+                        <StackPanel Orientation="Vertical" Grid.Column="1">
+                            <TextBlock Text="Monday" FontFamily="{StaticResource urbanistFont}" FontSize="20"/>
+                            <TextBlock Text="February 22, 2023" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
+                        </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" Margin="50 43 0 0">
-                        <local:Icon Symbol="Audio" Color="{StaticResource SecondaryColor}"/>
-                        <TextBlock Text="Up Next" FontSize="24" FontFamily="{StaticResource urbanistFont}" Margin="8 1 0 0"/>
-                    </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Column="2" Margin="24 0 24 0">
+                            <Border Width="40" Height="40" Background="Black" CornerRadius="20" VerticalAlignment="Top">
+                                <local:Icon Symbol="Mic" Color="{StaticResource WhiteColor}"/>
+                            </Border>
 
-                    <ItemsControl ItemsSource="{Binding Trainings}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Border Height="84" BorderThickness="1" BorderBrush="#9A603F" CornerRadius="15" Margin="0 14 0 0" Background="White">
-                                    <StackPanel Orientation="Horizontal">
-                                        <Border Width="52" Height="52" CornerRadius="26" Background="#F5EFEC" Margin="13 0 0 0">
-                                            <local:Icon Symbol="Brain" Color="{StaticResource SecondaryColor}"/>
-                                        </Border>
+                            <StackPanel Orientation="Vertical" Margin="16 0 0 0">
+                                <TextBlock Text="Sound Check" FontFamily="{StaticResource urbanistFont}" FontSize="14"/>
+                                <Grid Margin="0 12 0 0">
+                                    <Border Width="116" Height="8" Background="#DDDDDD" CornerRadius="4" HorizontalAlignment="Left"/>
+                                    <Border Width="103" Height="8" Background="{StaticResource SuccessColor}" CornerRadius="4" HorizontalAlignment="Left"/>
+                                </Grid>
+                            </StackPanel>
+                        </StackPanel>
 
-                                        <StackPanel Orientation="Vertical" Margin="22 17 13 17">
-                                            <TextBlock Text="{Binding Title}" FontSize="16" FontFamily="{StaticResource urbanistFont}"/>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{Binding Description}" FontSize="14" FontFamily="{StaticResource urbanistFont}" 
+                        <StackPanel Grid.Column="3" Orientation="Horizontal">
+                            <local:Icon Symbol="MagnifyingGlass" Color="{StaticResource BlackColor}" VerticalAlignment="Top" Margin="18 13 18 0"/>
+                            <local:Icon Symbol="Bell" Color="{StaticResource BlackColor}" Margin="18 13 18 0" VerticalAlignment="Top"/>
+                            <Image Width="58" Height="58" Source="/Assets/Images/Profile.png" VerticalAlignment="Top"/>
+                            <Border Background="{StaticResource RedColor}" CornerRadius="20" Width="40" Height="40" Margin="24 0 0 0">
+                                <local:Icon Symbol="Bug" Color="{StaticResource WhiteColor}"/>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <Grid Grid.Row="2" Margin="25">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="35"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Vertical">
+                        <Border Width="419" Height="77" Background="White" CornerRadius="15">
+                            <StackPanel Orientation="Horizontal" Margin="24">
+                                <local:Icon Symbol="Audio" Color="{StaticResource SecondaryColor}"/>
+                                <TextBlock Text="Continue Training" FontSize="24" FontFamily="{StaticResource urbanistFont}" Margin="8 1 0 0"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Width="419" Height="296" Margin="0 8 0 0" Background="LightGray" CornerRadius="8">
+                            <!--<wv2:WebView2 Source="https://www.youtube.com/embed/TfVlOpoo2Bw"/>-->
+                            <Image Source="/Assets/Images/Videostest.png" Width="419" Height="296" Stretch="Fill"/>
+                        </Border>
+                        <TextBlock Text="Introduction To The Kennedy Method" FontSize="16" FontFamily="{StaticResource urbanistFont}" Margin="50 12 0 0"/>
+
+                        <StackPanel Orientation="Horizontal" Margin="50 43 0 0">
+                            <local:Icon Symbol="Audio" Color="{StaticResource SecondaryColor}"/>
+                            <TextBlock Text="Up Next" FontSize="24" FontFamily="{StaticResource urbanistFont}" Margin="8 1 0 0"/>
+                        </StackPanel>
+
+                        <ItemsControl ItemsSource="{Binding Trainings}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Height="84" BorderThickness="1" BorderBrush="#9A603F" CornerRadius="15" Margin="0 14 0 0" Background="White">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Border Width="52" Height="52" CornerRadius="26" Background="#F5EFEC" Margin="13 0 0 0">
+                                                <local:Icon Symbol="Brain" Color="{StaticResource SecondaryColor}"/>
+                                            </Border>
+
+                                            <StackPanel Orientation="Vertical" Margin="22 17 13 17">
+                                                <TextBlock Text="{Binding Title}" FontSize="16" FontFamily="{StaticResource urbanistFont}"/>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock Text="{Binding Description}" FontSize="14" FontFamily="{StaticResource urbanistFont}" 
                                                            Foreground="#9AA0A6" Margin="0 10 0 0"/>
-                                                <Border Width="8" Height="8" CornerRadius="4" Background="#DADCE0" Margin="16 10 0 0"/>
-                                                <TextBlock Text="{Binding Trainer}" FontSize="14" FontFamily="{StaticResource urbanistFont}" 
+                                                    <Border Width="8" Height="8" CornerRadius="4" Background="#DADCE0" Margin="16 10 0 0"/>
+                                                    <TextBlock Text="{Binding Trainer}" FontSize="14" FontFamily="{StaticResource urbanistFont}" 
                                                            Foreground="#9AA0A6" Margin="16 10 0 0"/>
-                                                <Border Width="8" Height="8" CornerRadius="4" Background="#DADCE0" Margin="16 10 0 0"/>
-                                                <TextBlock Text="{Binding TrainingType}" FontSize="14" FontFamily="{StaticResource urbanistFont}" 
+                                                    <Border Width="8" Height="8" CornerRadius="4" Background="#DADCE0" Margin="16 10 0 0"/>
+                                                    <TextBlock Text="{Binding TrainingType}" FontSize="14" FontFamily="{StaticResource urbanistFont}" 
                                                            Foreground="#9AA0A6" Margin="16 10 0 0"/>
+                                                </StackPanel>
                                             </StackPanel>
                                         </StackPanel>
-                                    </StackPanel>
-                                </Border>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                    
-                    <Border Height="140" Background="White" CornerRadius="15" Margin="0 41 0 0">
-                        <StackPanel Orientation="Vertical" Margin="24 20">
-                            <TextBlock Text="Course Progress" FontSize="17" FontFamily="{StaticResource urbanistFont}" FontWeight="SemiBold"/>
-                            <TextBlock Text="75% Complete" FontSize="12" FontFamily="{StaticResource urbanistFont}" Margin="0 8"/>
-                            <Rectangle Height="1" Fill="#ECEFF3"/>
-                            <Grid Margin="0 10 0 0">
-                                <Border Height="8" Background="{StaticResource GrayscaleColorTint7}"/>
-                                <Border Height="8" Width="90" Background="{StaticResource OrangeColor}" HorizontalAlignment="Left"/>
-                            </Grid>
-                        </StackPanel>
-                    </Border>
-                </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
 
-                <StackPanel Orientation="Vertical" Grid.Column="2">
-                    <Border Height="420" CornerRadius="15" Background="White">
-                        <Grid Margin="28">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
+                        <Border Height="140" Background="White" CornerRadius="15" Margin="0 41 0 0">
+                            <StackPanel Orientation="Vertical" Margin="24 20">
+                                <TextBlock Text="Course Progress" FontSize="17" FontFamily="{StaticResource urbanistFont}" FontWeight="SemiBold"/>
+                                <TextBlock Text="75% Complete" FontSize="12" FontFamily="{StaticResource urbanistFont}" Margin="0 8"/>
+                                <Rectangle Height="1" Fill="#ECEFF3"/>
+                                <Grid Margin="0 10 0 0">
+                                    <Border Height="8" Background="{StaticResource GrayscaleColorTint7}"/>
+                                    <Border Height="8" Width="90" Background="{StaticResource OrangeColor}" HorizontalAlignment="Left"/>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
 
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Vertical" Grid.Column="2">
+                        <Border Height="420" CornerRadius="15" Background="White">
+                            <Grid Margin="28">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
 
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock FontSize="16" FontFamily="{StaticResource urbanistFont}" FontWeight="SemiBold">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock FontSize="16" FontFamily="{StaticResource urbanistFont}" FontWeight="SemiBold">
                                 <Run Text="Your Speed Drill Baseline:"/>
                                 <Run Text="48.86s" Foreground="{StaticResource SuccessColor}"/>
-                                </TextBlock>
-                                <TextBlock FontSize="11" FontFamily="{StaticResource urbanistFont}">
+                                    </TextBlock>
+                                    <TextBlock FontSize="11" FontFamily="{StaticResource urbanistFont}">
                                 <Run Text="Most Recent:"/>
                                 <Run Text="48.95s" FontWeight="Bold"/>
                                 <Run Text="Best:"/>
                                 <Run Text="48.9s" FontWeight="Bold"/>
                                 <Run Text="Initial:"/>
                                 <Run Text="48.9s" FontWeight="Bold"/>
-                                </TextBlock>
-                            </StackPanel>
+                                    </TextBlock>
+                                </StackPanel>
 
-                            <Border Grid.Column="1" Grid.Row="0" BorderBrush="#EAEFF4" BorderThickness="1" CornerRadius="2" VerticalAlignment="Top">
-                                <ComboBox  Width="120" BorderThickness="0"
+                                <Border Grid.Column="1" Grid.Row="0" BorderBrush="#EAEFF4" BorderThickness="1" CornerRadius="2" VerticalAlignment="Top">
+                                    <ComboBox  Width="120" BorderThickness="0"
                                   Background="White" Foreground="{StaticResource BlackColor}" FontSize="12" FontFamily="{StaticResource urbanistFont}">
-                                    <ComboBoxItem>February 2024</ComboBoxItem>
-                                    <ComboBoxItem IsSelected="True">March 2024</ComboBoxItem>
-                                    <ComboBoxItem>April 2024</ComboBoxItem>
-                                </ComboBox>
-                            </Border>
+                                        <ComboBoxItem>February 2024</ComboBoxItem>
+                                        <ComboBoxItem IsSelected="True">March 2024</ComboBoxItem>
+                                        <ComboBoxItem>April 2024</ComboBoxItem>
+                                    </ComboBox>
+                                </Border>
 
-                            <ListView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0 24 0 0"
+                                <ListView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0 24 0 0"
                                       ItemsSource="{Binding UserPractices}" BorderThickness="0"
                                       ItemContainerStyle="{StaticResource ListViewItemStyle}"
                                       ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
-                                <ListView.View>
-                                    <GridView ColumnHeaderContainerStyle="{StaticResource GridViewColumnHeaderStyle}">
-                                        <GridViewColumn Header="DATE" Width="200">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock Text="{Binding Date, Converter={StaticResource DateTimeConverter}, ConverterParameter='MMM, dd'}" Foreground="Black" VerticalAlignment="Center"/>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                        <GridViewColumn Header="TIME(MINUTES)" Width="190" DisplayMemberBinding="{Binding Time}"/>
-                                        <GridViewColumn Header="ACCURACY(%)" Width="110" CellTemplateSelector="{StaticResource AccuracyCellTemplateSelector}"/>
-                                        <GridViewColumn Header="WORDS" Width="107">
-                                            <GridViewColumn.CellTemplate>
-                                                <DataTemplate>
-                                                    <TextBlock>
+                                    <ListView.View>
+                                        <GridView ColumnHeaderContainerStyle="{StaticResource GridViewColumnHeaderStyle}">
+                                            <GridViewColumn Header="DATE" Width="200">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Text="{Binding Date, Converter={StaticResource DateTimeConverter}, ConverterParameter='MMM, dd'}" Foreground="Black" VerticalAlignment="Center"/>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+                                            <GridViewColumn Header="TIME(MINUTES)" Width="190" DisplayMemberBinding="{Binding Time}"/>
+                                            <GridViewColumn Header="ACCURACY(%)" Width="110" CellTemplateSelector="{StaticResource AccuracyCellTemplateSelector}"/>
+                                            <GridViewColumn Header="WORDS" Width="107">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock>
                                                         <Run Text="$"/><Run Text="{Binding Word}"/><Run Text="k"/>
-                                                    </TextBlock>
-                                                </DataTemplate>
-                                            </GridViewColumn.CellTemplate>
-                                        </GridViewColumn>
-                                    </GridView>
-                                </ListView.View>
-                            </ListView>
-                        </Grid>
-                    </Border>
+                                                        </TextBlock>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </Grid>
+                        </Border>
 
-                    <Border Height="420" CornerRadius="15" Background="{StaticResource WhiteColor}" Margin="0 15 0 0">
-                        <StackPanel Margin="41 41 41 20" Orientation="Vertical">
-                            <TextBlock Text="Weekly Hour Spent" FontFamily="{StaticResource plusJakartaFont}" FontSize="17" FontWeight="SemiBold"/>
-                            <TextBlock Margin="0 12 0 0"  FontFamily="{StaticResource plusJakartaFont}">
+                        <Border Height="420" CornerRadius="15" Background="{StaticResource WhiteColor}" Margin="0 15 0 0">
+                            <StackPanel Margin="41 41 41 20" Orientation="Vertical">
+                                <TextBlock Text="Weekly Hour Spent" FontFamily="{StaticResource plusJakartaFont}" FontSize="17" FontWeight="SemiBold"/>
+                                <TextBlock Margin="0 12 0 0"  FontFamily="{StaticResource plusJakartaFont}">
                                 <Run FontWeight="SemiBold" FontSize="20">26</Run>
                                 <Run FontSize="15" Foreground="{StaticResource GrayscaleColorTint5}">h</Run>
                                 <Run FontWeight="SemiBold" FontSize="20">18</Run>
                                 <Run FontSize="15" Foreground="{StaticResource GrayscaleColorTint5}">m</Run>
                                 <Run FontWeight="SemiBold" FontSize="20">13</Run>
                                 <Run FontSize="15" Foreground="{StaticResource GrayscaleColorTint5}">s</Run>
-                            </TextBlock>
+                                </TextBlock>
 
-                            <Grid Margin="0 40 0 0" >
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="20"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="46"/>
-                                    <RowDefinition Height="46"/>
-                                    <RowDefinition Height="46"/>
-                                    <RowDefinition Height="46"/>
-                                    <RowDefinition Height="46"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
+                                <Grid Margin="0 40 0 0" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="20"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="46"/>
+                                        <RowDefinition Height="46"/>
+                                        <RowDefinition Height="46"/>
+                                        <RowDefinition Height="46"/>
+                                        <RowDefinition Height="46"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-                                <TextBlock Text="4h" VerticalAlignment="Center" Grid.Row="0" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                <TextBlock Text="3h" VerticalAlignment="Center" Grid.Row="1" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                <TextBlock Text="2h" VerticalAlignment="Center" Grid.Row="2" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                <TextBlock Text="1h" VerticalAlignment="Center" Grid.Row="3" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                <TextBlock Text="0h" VerticalAlignment="Center" Grid.Row="4" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                    <TextBlock Text="4h" VerticalAlignment="Center" Grid.Row="0" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                    <TextBlock Text="3h" VerticalAlignment="Center" Grid.Row="1" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                    <TextBlock Text="2h" VerticalAlignment="Center" Grid.Row="2" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                    <TextBlock Text="1h" VerticalAlignment="Center" Grid.Row="3" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                    <TextBlock Text="0h" VerticalAlignment="Center" Grid.Row="4" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Foreground="{StaticResource GrayscaleColorTint5}"/>
 
-                                <Rectangle Grid.Row="0" Grid.Column="2" Fill="{StaticResource GrayscaleColorTint7}" Height="1" />
-                                <Rectangle Grid.Row="1" Grid.Column="2" Fill="{StaticResource GrayscaleColorTint7}" Height="1" />
-                                <Rectangle Grid.Row="2" Grid.Column="2" Fill="{StaticResource GrayscaleColorTint7}" Height="1" />
-                                <Rectangle Grid.Row="3" Grid.Column="2" Fill="{StaticResource GrayscaleColorTint7}" Height="1" />
-                                <Rectangle Grid.Row="4" Grid.Column="2" Fill="{StaticResource GrayscaleColorTint7}" Height="1" />
+                                    <Rectangle Grid.Row="0" Grid.Column="2" Fill="{StaticResource GrayscaleColorTint7}" Height="1" />
+                                    <Rectangle Grid.Row="1" Grid.Column="2" Fill="{StaticResource GrayscaleColorTint7}" Height="1" />
+                                    <Rectangle Grid.Row="2" Grid.Column="2" Fill="{StaticResource GrayscaleColorTint7}" Height="1" />
+                                    <Rectangle Grid.Row="3" Grid.Column="2" Fill="{StaticResource GrayscaleColorTint7}" Height="1" />
+                                    <Rectangle Grid.Row="4" Grid.Column="2" Fill="{StaticResource GrayscaleColorTint7}" Height="1" />
 
-                                <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="5" Background="Transparent" Orientation="Horizontal">
-                                    <Border Width="26" Height="68" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="5 0 0 23"/>
-                                    <Border Width="26" Height="108" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
-                                    <Border Width="26" Height="178" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
-                                    <Border Width="26" Height="87" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
-                                    <Border Width="26" Height="128" Background="#F58461" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
-                                    <Border Width="26" Height="128" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
-                                    <Border Width="26" Height="46" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
-                                </StackPanel>
+                                    <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="5" Background="Transparent" Orientation="Horizontal">
+                                        <Border Width="26" Height="68" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="5 0 0 23"/>
+                                        <Border Width="26" Height="108" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
+                                        <Border Width="26" Height="178" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
+                                        <Border Width="26" Height="87" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
+                                        <Border Width="26" Height="128" Background="#F58461" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
+                                        <Border Width="26" Height="128" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
+                                        <Border Width="26" Height="46" Background="#FDE6DF" CornerRadius="14" VerticalAlignment="Bottom" Margin="57 0 0 23"/>
+                                    </StackPanel>
 
-                                <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="5" Background="Transparent" Orientation="Horizontal">
-                                    <Rectangle Stroke="{StaticResource MainColor}" Height="1" Width="352" StrokeThickness="1" StrokeDashArray="4 4"
+                                    <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="5" Background="Transparent" Orientation="Horizontal">
+                                        <Rectangle Stroke="{StaticResource MainColor}" Height="1" Width="352" StrokeThickness="1" StrokeDashArray="4 4"
                                                        SnapsToDevicePixels="True" VerticalAlignment="Top" Margin="0 77 0 0"/>
-                                    <Border BorderThickness="1" BorderBrush="#EAEAEA" Width="74" Height="37" CornerRadius="14" 
+                                        <Border BorderThickness="1" BorderBrush="#EAEAEA" Width="74" Height="37" CornerRadius="14" 
                                             Background="White" VerticalAlignment="Top" Margin="-37 37 0 0">
-                                        <TextBlock Text="2h 40m" FontSize="13" Foreground="{StaticResource MainColor}" FontFamily="{StaticResource plusJakartaFont}"
+                                            <TextBlock Text="2h 40m" FontSize="13" Foreground="{StaticResource MainColor}" FontFamily="{StaticResource plusJakartaFont}"
                                                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                    </Border>
-                                </StackPanel>
+                                        </Border>
+                                    </StackPanel>
 
-                                <StackPanel Grid.Row="5" Grid.Column="2" Orientation="Horizontal">
-                                    <TextBlock Text="Mo" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="5 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                    <TextBlock Text="Tu" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                    <TextBlock Text="We" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                    <TextBlock Text="Thu" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                    <TextBlock Text="Fr" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                    <TextBlock Text="Sa" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                    <TextBlock Text="Su" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
-                                </StackPanel>
-                            </Grid>
-                        </StackPanel>
-                    </Border>
-                </StackPanel>
+                                    <StackPanel Grid.Row="5" Grid.Column="2" Orientation="Horizontal">
+                                        <TextBlock Text="Mo" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="5 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                        <TextBlock Text="Tu" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                        <TextBlock Text="We" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                        <TextBlock Text="Thu" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                        <TextBlock Text="Fr" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                        <TextBlock Text="Sa" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                        <TextBlock Text="Su" FontSize="15" FontFamily="{StaticResource plusJakartaFont}" Margin="65 0 0 0" Foreground="{StaticResource GrayscaleColorTint5}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Grid>
             </Grid>
         </Grid>
-    </Grid>
-
+    </Viewbox>
 </UserControl>
