@@ -59,6 +59,7 @@
     <SolidColorBrush x:Key="RedBackgroundColor">#F5EFEC</SolidColorBrush>
     <SolidColorBrush x:Key="YellowBackgroundColor">#FFF5E9</SolidColorBrush>
     <SolidColorBrush x:Key="PurpleBackgroundColor">#F5F5F5</SolidColorBrush>
+    <SolidColorBrush x:Key="LightGrayBackgroundColor">#F8F9FA</SolidColorBrush>
     
     <!--Standard Colors-->
     <SolidColorBrush x:Key="WhiteColor">#FFFFFF</SolidColorBrush>
