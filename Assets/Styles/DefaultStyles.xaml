@@ -286,19 +286,19 @@
 
     <DataTemplate x:Key="MenuItemNormalTemplate" DataType="{x:Type local:MenuItem}">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="24 16">
-            <local:Icon Symbol="{Binding Icon}" Color="{StaticResource MainColorTint2}" x:Name="Icon"/>
+            <local:Icon Symbol="{Binding Icon}" Color="{StaticResource MainColorTint2}" x:Name="Icon" VerticalAlignment="Center"/>
             <TextBlock Text="{Binding Title}" Margin="12 0 0 0" x:Name="Title"
                    FontFamily="{StaticResource urbanistFont}" FontSize="16"
-                   Foreground="{StaticResource MainColorTint2}"/>
+                   Foreground="{StaticResource MainColorTint2}" VerticalAlignment="Center"/>
         </StackPanel>
     </DataTemplate>
 
     <DataTemplate x:Key="MenuItemSelectedTemplate" DataType="{x:Type local:MenuItem}">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="24 16">
-            <local:Icon Symbol="{Binding Icon}" Color="{StaticResource SecondaryColor}" x:Name="Icon"/>
+            <local:Icon Symbol="{Binding Icon}" Color="{StaticResource SecondaryColor}" x:Name="Icon" VerticalAlignment="Center"/>
             <TextBlock Text="{Binding Title}" Margin="12 0 0 0" x:Name="Title"
                    FontFamily="{StaticResource urbanistFont}" FontSize="16"
-                   Foreground="{StaticResource SecondaryColor}"/>
+                   Foreground="{StaticResource SecondaryColor}" VerticalAlignment="Center"/>
         </StackPanel>
     </DataTemplate>
 
