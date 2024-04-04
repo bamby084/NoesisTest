@@ -7,7 +7,6 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../Styles/DefaultStyles.xaml"/>
-                <ResourceDictionary Source="../Styles/Colors.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
@@ -30,64 +29,23 @@
                     </Grid.RowDefinitions>
 
                     <Image Source="/Assets/Images/logo.png" Width="139" Height="61" HorizontalAlignment="Left"></Image>
-                    <StackPanel Grid.Row="2" Orientation="Vertical">
-                        <TextBlock Text="GENERAL" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
-                        <Border CornerRadius="16" Background="{StaticResource RedBackgroundColor}" Margin="0 5 0 5">
-                            <StackPanel Orientation="Horizontal" Height="56" >
-                                <local:Icon Symbol="DashBoard" Color="{StaticResource SecondaryColor}" Margin="24 0 12 0"/>
-                                <TextBlock Text="Dashboard" FontFamily="{StaticResource urbanistFont}" FontSize="16" 
-                                   VerticalAlignment="Center" Foreground="{StaticResource SecondaryColor}" FontWeight="SemiBold"/>
-                            </StackPanel>
-                        </Border>
-
-                        <StackPanel Orientation="Horizontal" Height="56">
-                            <local:Icon Symbol="Book" Margin="24 0 12 0" Color="{StaticResource MainColorTint2}"/>
-                            <TextBlock Text="How It Works" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
-                        </StackPanel>
-
-                        <StackPanel Orientation="Horizontal" Height="56">
-                            <local:Icon Symbol="Resource" Margin="24 0 12 0" Color="{StaticResource MainColorTint2}"/>
-                            <TextBlock Text="Resources" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
-                        </StackPanel>
-
-
-                        <TextBlock Text="COURSES" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
-                        <StackPanel Orientation="Horizontal" Height="56">
-                            <local:Icon Symbol="Brain" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
-                            <TextBlock Text="My Workouts" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
-                        </StackPanel>
-
-                        <Border  Margin="0 0 0 5">
-                            <StackPanel Orientation="Horizontal" Height="56">
-                                <local:Icon Symbol="BookOpen" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
-                                <TextBlock Text="Trainnings" FontFamily="{StaticResource urbanistFont}"  VerticalAlignment="Center" 
-                               FontSize="16" Foreground="{StaticResource MainColorTint2}" />
-                            </StackPanel>
-                        </Border>
-
-                        <TextBlock Text="OTHERS" FontFamily="{StaticResource urbanistFont}" FontSize="14" Foreground="{StaticResource MainColorTint3}"/>
-                        <StackPanel Orientation="Horizontal" Height="56">
-                            <local:Icon Symbol="Medal" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
-                            <TextBlock Text="Leader Board" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Height="56">
-                            <local:Icon Symbol="Setting" Color="{StaticResource MainColorTint2}" Margin="24 0 12 0"/>
-                            <TextBlock Text="Setting" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource MainColorTint2}"/>
-                        </StackPanel>
-                    </StackPanel>
-
+                    
+                    <ListBox Grid.Row="2" ItemsSource="{Binding MenuItems}" 
+                             ItemContainerStyle="{StaticResource MenuItemContainerStyle}">
+                    </ListBox>
+                    
                     <Border CornerRadius="29" Background="{StaticResource SecondaryColor}" Height="175" Width="206" Grid.Row="3">
                         <StackPanel Orientation="Vertical">
                             <TextBlock FontFamily="{StaticResource hannoFont}" Foreground="{StaticResource WhiteColor}"
                                TextWrapping="Wrap" Width="127" TextAlignment="Center" Margin="0 18 0 0" FontSize="18">
-                        <Run Text="Still Have Question?"/>
-                        <Run Text="We're Here To Support" FontFamily="{StaticResource urbanistFont}" FontSize="16"/>
+                                <Run Text="Still Have Question?"/>
+                                <Run Text="We're Here To Support" FontFamily="{StaticResource urbanistFont}" FontSize="16"/>
                             </TextBlock>
-
-                            <Border CornerRadius="12" Height="37" Width="158" Background="{StaticResource WhiteColor}" Margin="0 20 0 0">
-                                <TextBlock Text="Contact" Foreground="{StaticResource SecondaryColor}" FontFamily="{StaticResource urbanistFont}" FontWeight="SemiBold" FontSize="14"
-                                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                            </Border>
+                            
+                            <Button Content="Contact" Width="158" Height="37" Margin="0 20 0 0"
+                                    FontFamily="{StaticResource urbanistFont}" FontWeight="SemiBold" FontSize="14"
+                                    Style="{StaticResource DefaultButtonStyle}"/>
+                            
                         </StackPanel>
                     </Border>
 

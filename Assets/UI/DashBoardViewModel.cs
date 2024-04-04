@@ -24,7 +24,6 @@ namespace Testing
             }
         }
 
-
         private ObservableCollection<Training> _trainings;
         public ObservableCollection<Training> Trainings
         {
@@ -32,6 +31,17 @@ namespace Testing
             set
             {
                 _trainings = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private ObservableCollection<MenuItem> _menuItems;
+        public ObservableCollection<MenuItem> MenuItems
+        {
+            get => _menuItems;
+            set
+            {
+                _menuItems = value;
                 OnPropertyChanged();
             }
         }
@@ -56,6 +66,22 @@ namespace Testing
                 new Training() { Title = "Tapping", Description = "Basic Training", Trainer = "John Kennedy", TrainingType = "Training"},
                 new Training() { Title = "Tapping", Description = "Advanced Training", Trainer = "John Kennedy", TrainingType = "Training"},
             };
+
+            _menuItems = new ObservableCollection<MenuItem>()
+            {
+                new MenuItem() { Title = "GENERAL", MenuItemType = MenuItemType.GroupItem},
+                new MenuItem(){ Title = "Dashboard", Icon = IconType.DashBoard},
+                new MenuItem(){ Title = "How It Works", Icon = IconType.Book},
+                new MenuItem(){ Title = "Resources", Icon = IconType.Resource},
+                
+                new MenuItem() {Title = "COURSES",  MenuItemType= MenuItemType.GroupItem},
+                new MenuItem(){ Title = "Workout", Icon = IconType.Brain},
+                new MenuItem(){ Title = "Trainings", Icon = IconType.BookOpen},
+                
+                new MenuItem() {Title = "OTHER", MenuItemType = MenuItemType.GroupItem},
+                new MenuItem(){ Title = "Leader Board", Icon = IconType.Medal},
+                new MenuItem(){ Title = "Setting", Icon = IconType.Setting}
+            };
         }
     }
 
@@ -70,7 +96,7 @@ namespace Testing
     public class Training
     {
         public string Title { get; set; }
-        public string Description { get; set; } 
+        public string Description { get; set; }
         public string Trainer { get; set; }
         public string TrainingType { get; set; }
     }

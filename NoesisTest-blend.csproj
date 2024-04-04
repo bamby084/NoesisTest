@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Assets\UI\DashBoardViewModel.cs" />
     <Compile Include="Assets\UI\Icon.cs" />
+    <Compile Include="Assets\UI\MenuItem.cs" />
     <Compile Include="Blend\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
