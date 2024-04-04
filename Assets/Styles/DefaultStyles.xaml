@@ -284,6 +284,32 @@
         </Setter>
     </Style>
 
+    <Style TargetType="Button" x:Key="FlatButtonStyle">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{StaticResource SecondaryColor}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                            CornerRadius="16" x:Name="Border">
+                        <ContentPresenter Margin="2" VerticalAlignment="Center"/>
+                    </Border>
+                    
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource SecondaryColorTint4}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource GrayscaleColorTint9}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <DataTemplate x:Key="MenuItemNormalTemplate" DataType="{x:Type local:MenuItem}">
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="24 16">
             <local:Icon Symbol="{Binding Icon}" Color="{StaticResource MainColorTint2}" x:Name="Icon" VerticalAlignment="Center"/>

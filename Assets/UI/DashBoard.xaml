@@ -49,10 +49,13 @@
                         </StackPanel>
                     </Border>
 
-                    <StackPanel Orientation="Horizontal" Height="56" Grid.Row="4" Margin="0 28 0 30">
-                        <local:Icon Symbol="LogOut" Color="{StaticResource BlackColor}" Margin="24 0 12 0"/>
-                        <TextBlock Text="Log Out" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource BlackColor}"/>
-                    </StackPanel>
+                    <Button Grid.Row="4" Margin="0 28 0 30" Style="{StaticResource FlatButtonStyle}" Height="56" BorderThickness="0"
+                            Cursor="Hand">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <local:Icon Symbol="LogOut" Color="{StaticResource BlackColor}" Margin="24 0 12 0"/>
+                            <TextBlock Text="Log Out" FontFamily="{StaticResource urbanistFont}" FontSize="16" VerticalAlignment="Center" Foreground="{StaticResource BlackColor}"/>
+                        </StackPanel>
+                    </Button>
                 </Grid>
             </Border>
 
